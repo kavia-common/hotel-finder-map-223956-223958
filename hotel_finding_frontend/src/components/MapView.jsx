@@ -24,7 +24,7 @@ export default function MapView() {
         const google = await loader.load();
         if (!mounted) return;
 
-        const center = { lat: 37.7749, lng: -122.4194 };
+        const center = { lat: 28.6139, lng: 77.2090 }; // New Delhi default for India
         const map = new google.maps.Map(containerRef.current, {
           center,
           zoom: 12,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { selectHotel } from '../state/slices/hotelsSlice';
+import { formatINRCurrency } from '../utils/india';
 
 // PUBLIC_INTERFACE
 export default function HotelCard({ hotel }) {
@@ -18,7 +19,7 @@ export default function HotelCard({ hotel }) {
           {hotel.amenities.slice(0, 3).join(' • ')}
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 10 }}>
-          <div><strong>${hotel.price}</strong> / night</div>
+          <div><strong>{formatINRCurrency(hotel.price)}</strong> / night</div>
           <div className="muted">{hotel.distanceKm} km</div>
         </div>
         <div style={{ marginTop: 10 }}>

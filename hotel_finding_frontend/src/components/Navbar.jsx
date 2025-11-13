@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { fetchHotels, setSearchQuery } from '../state/slices/hotelsSlice';
 import { getHealthStatus } from '../utils/healthcheck';
+import { i18n } from '../i18n/i18n';
 
 function useDebouncedCallback(cb, delay = 400) {
   const timeout = useRef(null);
@@ -70,15 +71,15 @@ export default function Navbar() {
     };
   }, []);
 
-  const searchPlaceholder = useMemo(() => 'Search city, hotel, landmark...', []);
+  const searchPlaceholder = useMemo(() => i18n.t('copy', 'searchPlaceholder'), []);
 
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-inner">
-        <div className="brand" aria-label="Hotel Finder">
+        <a className="brand" href="#/" aria-label="Hotel Finder">
           <span className="dot" aria-hidden="true" />
           <span>Hotel Finder</span>
-        </div>
+        </a>
         <div className="search" role="search">
           <span aria-hidden="true" style={{ color: '#6B7280' }}>🔎</span>
           <input
@@ -92,6 +93,8 @@ export default function Navbar() {
           </button>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <a className="btn ghost" href="#/open" aria-label="Open screen">Open</a>
+          <a className="btn ghost" href="#/home" aria-label="Home figma screen">Home</a>
           <div
             aria-label="Health status"
             title={`Health: ${health.endpointOk === null ? 'checking' : (health.endpointOk ? 'ok' : 'unreachable')}`}
@@ -104,7 +107,7 @@ export default function Navbar() {
             }}
           />
           <a className="btn secondary" href="https://reactjs.org" rel="noreferrer" target="_blank" aria-label="Help">
-            Help
+            {i18n.t('nav', 'help')}
           </a>
         </div>
       </div>

@@ -1,0 +1,254 @@
+@import url("./common.css");
+
+.open-page-10-33.screen-container {
+  width: 411px;
+  height: 823px;
+  background-color: var(--style-0-background);
+  border-radius: var(--style-0-radius);
+}
+
+.open-page-10-33 .root-bg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 411px;
+  height: 823px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Element: Welcome to, Hotel Finder (10:34) */
+#el-10-34 {
+  position: absolute;
+  left: 21px;
+  top: 73px;
+  width: 287px;
+  height: 93px;
+  z-index: 2;
+  font-family: var(--typo-21-family);
+  font-size: var(--typo-21-size);
+  font-weight: var(--typo-21-weight);
+  line-height: var(--typo-21-line-height);
+  letter-spacing: var(--typo-21-letter-spacing);
+  color: var(--typo-21-color);
+  text-align: var(--typo-21-text-align);
+  white-space: pre-wrap;
+  margin: 0;
+  background-color: transparent;
+}
+
+/* Element: carbon:next-outline container (10:35) */
+#el-10-35 {
+  position: absolute;
+  left: 345px;
+  top: 738px;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  background-color: var(--style-1-background);
+}
+#el-10-36 {
+  position: absolute;
+  left: 12.5px;
+  top: 12.5px;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  image-rendering: -webkit-optimize-contrast;
+}
+#el-10-37 {
+  position: absolute;
+  left: 3.124985px;
+  top: 3.124992px;
+  width: 43.750008px;
+  height: 43.750008px;
+  z-index: 1;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Element: Body text (10:38) */
+#el-10-38 {
+  position: absolute;
+  left: 21px;
+  top: 193px;
+  width: 228px;
+  height: 189px;
+  z-index: 4;
+  font-family: var(--typo-22-family);
+  font-size: var(--typo-22-size);
+  font-weight: var(--typo-22-weight);
+  line-height: var(--typo-22-line-height);
+  letter-spacing: var(--typo-22-letter-spacing);
+  color: var(--typo-22-color);
+  text-align: var(--typo-22-text-align);
+  white-space: pre-wrap;
+  margin: 0;
+  background-color: transparent;
+}
+
+/* Component: Status Bar (10:316) */
+#el-10-316 {
+  position: absolute;
+  left: 18px;
+  top: 6px;
+  width: 375.00003px;
+  height: 20.000002px;
+  z-index: 5;
+}
+#el-10-316 .time {
+  position: absolute;
+  left: 163px;
+  top: 3px;
+  width: 49px;
+  height: 16px;
+  font-family: var(--typo-23-family);
+  font-size: var(--typo-23-size);
+  font-weight: var(--typo-23-weight);
+  line-height: var(--typo-23-line-height);
+  letter-spacing: var(--typo-23-letter-spacing);
+  color: var(--typo-23-color);
+  text-align: var(--typo-23-text-align);
+  margin: 0;
+}
+#el-10-316 .right-side {
+  position: absolute;
+  left: 279px;
+  top: 3px;
+  width: 90.5px;
+  height: 16.299988px;
+}
+#el-10-316 .right-side .battery {
+  position: absolute;
+  left: 64px;
+  top: 1.5px;
+  width: 26.5px;
+  height: 11.5px;
+}
+#el-10-316 .right-side .battery .path-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 11.5px;
+}
+#el-10-316 .right-side .battery .path-2 {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 22px;
+  height: 9.5px;
+}
+#el-10-316 .right-side .battery .terminal {
+  position: absolute;
+  left: 25px;
+  top: 3.299805px;
+  width: 1.5px;
+  height: 4.90029px;
+}
+#el-10-316 .right-side .battery .reserve {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 20px;
+  height: 7.5px;
+}
+#el-10-316 .right-side .percent {
+  position: absolute;
+  left: 29px;
+  top: 0.3px;
+  width: 32px;
+  height: 16px;
+  font-family: var(--typo-24-family);
+  font-size: var(--typo-24-size);
+  font-weight: var(--typo-24-weight);
+  line-height: var(--typo-24-line-height);
+  letter-spacing: var(--typo-24-letter-spacing);
+  color: var(--typo-24-color);
+  text-align: var(--typo-24-text-align);
+  margin: 0;
+}
+#el-10-316 .right-side .alarm {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+}
+#el-10-316 .right-side .bluetooth {
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+}
+
+/* Left Side group with horizontal layout is approximated via absolute positioning to maintain pixel perfectness */
+#el-10-316 .left-side {
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 78px;
+  height: 16px;
+}
+#el-10-316 .left-side .mobile-signal {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 21px;
+  height: 14px;
+}
+#el-10-316 .left-side .mobile-signal .signal {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16.5px;
+  height: 10px;
+}
+#el-10-316 .left-side .carrier {
+  position: absolute;
+  left: 25px;
+  top: 0px;
+  width: 34px;
+  height: 16px;
+  font-family: var(--typo-25-family);
+  font-size: var(--typo-25-size);
+  font-weight: var(--typo-25-weight);
+  line-height: var(--typo-25-line-height);
+  letter-spacing: var(--typo-25-letter-spacing);
+  color: var(--typo-25-color);
+  text-align: var(--typo-25-text-align);
+  margin: 0;
+}
+#el-10-316 .left-side .wifi {
+  position: absolute;
+  left: 63px;
+  top: 0px;
+  width: 15px;
+  height: 14px;
+}
+#el-10-316 .left-side .wifi .wifi-icon {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 14.25px;
+  height: 10px;
+}
+
+/* Component: Home Indicator (10:349) */
+#el-10-349 {
+  position: absolute;
+  left: 20px;
+  top: 780px;
+  width: 375px;
+  height: 34px;
+  z-index: 6;
+}
+#el-10-349 .home-indicator-bar {
+  position: absolute;
+  left: 121px;
+  top: 21px;
+  width: 134px;
+  height: 5px;
+  background-color: var(--style-7-background);
+  border-radius: var(--style-7-radius);
+}

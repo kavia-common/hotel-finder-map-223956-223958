@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Router from './Router';
 import { Provider } from 'react-redux';
 import { store } from './state/store';
 import { bootstrapMocks } from './mocks/browser';
@@ -17,7 +17,7 @@ async function start() {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <Router />
       </Provider>
     </React.StrictMode>
   );
