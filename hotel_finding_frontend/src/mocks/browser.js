@@ -7,6 +7,8 @@ const worker = setupWorker(...handlers);
 /**
  * Starts MSW in development or when explicitly enabled.
  * Does nothing in production unless REACT_APP_ENABLE_MSW=true.
+ * - REACT_APP_ENABLE_MSW=true => force enable in any NODE_ENV.
+ * - Otherwise enabled in NODE_ENV=development.
  */
 // PUBLIC_INTERFACE
 export async function bootstrapMocks() {

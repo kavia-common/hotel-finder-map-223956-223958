@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchHotels, setSearchQuery } from '../state/slices/hotelsSlice';
+import { getHealthStatus } from '../utils/healthcheck';
 
 function useDebouncedCallback(cb, delay = 400) {
   const timeout = useRef(null);
@@ -52,6 +53,23 @@ export default function Navbar() {
     // initial no-op; could fetch popular cities
   }, []);
 
+  const [health, setHealth] = useState({ endpointOk: null });
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      const h = await getHealthStatus();
+      if (mounted) setHealth(h);
+    })();
+    const id = setInterval(async () => {
+      const h = await getHealthStatus();
+      if (mounted) setHealth(h);
+    }, 15000);
+    return () => {
+      mounted = false;
+      clearInterval(id);
+    };
+  }, []);
+
   const searchPlaceholder = useMemo(() => 'Search city, hotel, landmark...', []);
 
   return (
@@ -73,7 +91,18 @@ export default function Navbar() {
             Locate
           </button>
         </div>
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div
+            aria-label="Health status"
+            title={`Health: ${health.endpointOk === null ? 'checking' : (health.endpointOk ? 'ok' : 'unreachable')}`}
+            style={{
+              width: 10,
+              height: 10,
+              borderRadius: 9999,
+              background: health.endpointOk === null ? '#E5E7EB' : (health.endpointOk ? '#10B981' : '#EF4444'),
+              boxShadow: '0 0 0 3px rgba(0,0,0,0.04)'
+            }}
+          />
           <a className="btn secondary" href="https://reactjs.org" rel="noreferrer" target="_blank" aria-label="Help">
             Help
           </a>

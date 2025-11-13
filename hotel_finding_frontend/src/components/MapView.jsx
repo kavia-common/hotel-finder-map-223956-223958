@@ -51,6 +51,7 @@ export default function MapView() {
         });
       } catch {
         // Google Maps failed to load (e.g., missing key); handled by showing placeholder
+        // Manual check: with no/invalid REACT_APP_GOOGLE_MAPS_API_KEY the map won't initialize but UI remains responsive.
       }
     })();
     return () => { mounted = false; };

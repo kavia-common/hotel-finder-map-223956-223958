@@ -5,6 +5,8 @@ let loader;
 
 /**
  * Create or reuse Google Maps JS API loader using API key from env.
+ * If the key is missing or invalid, loader.load() will reject at runtime;
+ * MapView handles this by showing a loading/placeholder without crashing.
  */
 // PUBLIC_INTERFACE
 export function getMapsLoader() {
