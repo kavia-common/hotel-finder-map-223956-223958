@@ -1,17 +1,24 @@
 {
   "name": "react-kavia",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
+    "@reduxjs/toolkit": "^1.9.7",
+    "msw": "^2.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.3",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:msw": "node ./src/mocks/browser.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "echo \"MSW: no build-time worker generation needed for browser\""
   },
   "eslintConfig": {
     "extends": "react-app"
